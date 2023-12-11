@@ -1,0 +1,33 @@
+<app-title 
+title="Admin: {{user.name}}"
+></app-title>
+<div
+    class="table-responsive ms-5 me-5"
+>
+    <table
+        class="table table-primary"
+    >
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">food</th>
+                <th scope="col">delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let food of foods">
+                <th scope="row">{{food.id}}</th>
+                <td>{{food.name}}</td>
+                <td>
+                    <button
+                        class="btn btn-primary btn-danger"
+                        (click)="deleteFood(food.id)"
+                    >
+                        delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>  
+

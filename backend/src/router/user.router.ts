@@ -67,4 +67,6 @@ const generateTokenReponse = (user : User) => {
         token: token
     };
 }
+
+
 export default router;

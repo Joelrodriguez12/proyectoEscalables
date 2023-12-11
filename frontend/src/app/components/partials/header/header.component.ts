@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
     userService.userObservable.subscribe((newUser) => {
       this.user = newUser;
     })
-   }
+}
 
   ngOnInit(): void {
   }
@@ -32,4 +32,8 @@ export class HeaderComponent implements OnInit {
   get isAuth(){
     return this.user.token;
   }
+
+  public get isAdmin(): boolean {
+    return this.user.isAdmin
+    ;}
 }

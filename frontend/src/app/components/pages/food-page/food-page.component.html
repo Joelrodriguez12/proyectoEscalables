@@ -35,7 +35,7 @@ resetLinkText="Volver a inicio"></app-not-found>
                 </span>
             </div>
 
-            <button (click)="addtoCart()">Aniadir al carro</button>
+            <button *ngIf="isAuth" (click)="addtoCart()">Aniadir al carro</button>
         
     </div>
 </div>

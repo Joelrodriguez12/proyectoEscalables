@@ -65,5 +65,37 @@ router.get('/:foodId', asyncHandler(async (req, res) => {
     res.send(food);
 }));
 
+router.post('/create',
+asyncHandler(async (req:any, res:any) => {
+    const newFood = req.body;
+
+
+    const food = new FoodModel({...newFood,user: req.user.id});
+    await food.save();
+    res.send(food);
+})
+)
+
+// Actualizar un alimento por su ID
+router.put('/:foodId', asyncHandler(async (req, res) => {
+    const updatedFood = await FoodModel.findByIdAndUpdate(req.params.foodId, req.body, { new: true });
+    if (updatedFood) {
+        res.send(updatedFood);
+    } else {
+        res.status(404).send('Food not found');
+    }
+}));
+
+// Eliminar un alimento por su ID
+router.delete('/:foodId', asyncHandler(async (req, res) => {
+    const deletedFood = await FoodModel.findByIdAndDelete(req.params.foodId);
+    if (deletedFood) {
+        res.send(deletedFood);
+    } else {
+        res.status(404).send('Food not found');
+    }
+}));
+
+
 
 export default router;

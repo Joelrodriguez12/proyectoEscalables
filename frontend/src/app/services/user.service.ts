@@ -24,6 +24,14 @@ export class UserService {
     return this.userSubject.value;
   }
 
+  public get isAdmin(): boolean {
+    return this.currentUser.isAdmin
+    ;}
+
+  public get name(): string {
+    return this.currentUser.name
+    ;}
+
   login(userLogin:IUserLogin):Observable<User>{
     return this.http.post<User>(USER_LOGIN_URL, userLogin).pipe(
       tap({

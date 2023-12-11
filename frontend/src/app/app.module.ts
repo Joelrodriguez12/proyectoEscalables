@@ -25,6 +25,7 @@ import { OrderItemsListComponent } from './components/partials/order-items-list/
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { AboutPageComponent } from './components/pages/about-page/about-page.component';
+import { AdminPageComponent } from './components/pages/admin-page/admin-page.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { AboutPageComponent } from './components/pages/about-page/about-page.com
     OrderItemsListComponent,
     PaymentPageComponent,
     AboutPageComponent,
+    AdminPageComponent,
     
   ],
   imports: [

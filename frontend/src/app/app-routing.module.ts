@@ -9,6 +9,7 @@ import { RegisterPageComponent } from './components/pages/register-page/register
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { AboutPageComponent } from './components/pages/about-page/about-page.component';
+import { AdminPageComponent } from './components/pages/admin-page/admin-page.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path:'register', component:RegisterPageComponent},
   {path:'checkout', component:CheckoutPageComponent},
   {path:'payment', component:PaymentPageComponent},
-  {path:'about', component:AboutPageComponent}
+  {path:'about', component:AboutPageComponent},
+  {path:'admin', component:AdminPageComponent}
 
 ];
 
